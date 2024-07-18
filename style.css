@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+span,
+a,
+label {
+  display: inline-block;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  margin: 20px auto;
+  padding: 120px;
+}
+.homediv {
+  width: 50%;
+}
+.wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.hometitle {
+  font-size: 50px;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+.pic {
+  width: 100px;
+  margin-left: 20px;
+  transform: translateY(19px);
+}
+.hometext {
+  font-size: 22px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+.get {
+  font-size: 30px;
+  padding: 23px 80px;
+  background-color: #263238;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.homepic {
+  width: 45%;
+}
+.container {
+  padding: 20px;
+  max-width: 1600px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'Speaking Writing Reading'
+    'Speaking Listening Listening';
+}
+
+.sec {
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.Speaking {
+  grid-area: Speaking;
+  background-color: gold;
+}
+
+.Writing {
+  grid-area: Writing;
+  background-color: lime;
+}
+
+.Reading {
+  grid-area: Reading;
+  background-color: violet;
+}
+
+.Listening {
+  grid-area: Listening;
+  background-color: dodgerblue;
+}
+
+
+@media(max-width:1000px){
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    'Speaking Writing'
+    'Reading Listening';
+  }
+}
+@media(max-width:700px){
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    'Speaking'
+    'Writing'
+    'Reading'
+    'Listening';
+  }
+}
+@media(max-width: 575px){
+  .pic {
+    display: none;
+  }
+}
